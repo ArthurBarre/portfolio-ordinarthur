@@ -133,13 +133,12 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 8px;
-
 }
 
-.me_card {
+.card_space_between {
   position: relative;
   width: calc(100% - 32px);
-  height: 70px;
+  height: 48px;
   padding: 16px;
   border-radius: 24px;
   background-color: #1D1B1E;
@@ -148,8 +147,160 @@ body {
   align-items: center;
 }
 
-.me_text{ 
+.me_text { 
   color: white;
   font-size: 32px;
+  padding-left: 8px;
 }
 
+.top_right_wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.profile_picture {
+  margin-top: 16px;
+  margin-right: 16px;
+  width: 300px;
+  height: calc(100% - 48px);
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.info_wrapper {
+  width: 100%;
+  height: calc(100% - 32px);
+  display: flex;
+  flex-direction: column;
+}
+
+.info_subtitle {
+  color: #A09FA0;
+  font-size: 18px;
+}
+
+.info_value {
+  color: white;
+  font-size: 18px;
+}
+
+.margin_top{
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.card_space_between_map {
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  padding: 16px;
+  border-radius: 24px;
+  background-color: #1D1B1E;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin-top: 16px;
+}
+.bottom_left {
+  width: 45%;
+  height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.left_title{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.grey {
+  color: #797778;
+}
+
+.projects {
+  display: flex;
+  margin-top: 16px;
+}
+
+.project_thumbnail {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin-right: 16px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: #0F0F0F;
+  opacity: 0;
+}
+.background:hover {
+  opacity: 0.25; cursor: pointer;
+}
+
+.project_1 {
+  background-image: url("./assets/greenlandice_oli2_2023072_lrg.jpg");
+}
+
+.project_2 {
+  background-image: url("./assets/KSC-20150810-PH-NAS01_0022~small.jpg");
+}
+
+.project_3 {
+  background-image: url("./assets/poppies_oli2_2023105_lrg.jpg");
+}
+
+.project_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+.bottom_right {
+  width: 45%;
+  height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.about { 
+  padding-top: 4px;
+  color: #A9A8AA;
+  text-align: justify;
+  font-size: 16px;
+}
+.brands_container {
+  width: calc(100% - 32px);
+  padding: 16px;
+  border-radius: 24px;
+  background-color: #1D1B1E;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+
+.brand {
+  width: 66px;
+  height: 66px;
+  border-radius: 100%;
+  background-color: #262427;
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.brand:hover {
+  cursor: pointer;
+  background-color: #2b4570;
+}
