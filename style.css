@@ -1,0 +1,155 @@
+:root{
+  --bs-dark: #212529;
+}
+body {
+  background-color: #0F0F0F;
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  padding: 16px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  width: calc(100% - 32px);
+  height: 60%;
+  margin: 16px;
+}
+
+.bottom {
+  display: flex;
+  width: calc(100% - 32px);
+  height: 40%;
+  margin: 16px;
+}
+
+.top_left_container {
+  width: 50%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
+}
+
+.card {
+  position: relative;
+  width: calc(100% - 64px);
+  height: 400px;
+  padding: 32px;
+  border-radius: 24px;
+  background-color: #1D1B1E;
+}
+
+.cards_numbers {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.card_number {
+  width: calc((100% / 3) - 32px);
+  height: 215px;
+  padding: 32px;
+  border-radius: 24px;
+  margin-top: 16px;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.card_green {
+  background-color: #03C39A;
+}
+
+.card_yellow {
+  background-color: #FFBF3D;
+  color: black;
+}
+
+.card_red {
+  background-color: #FF6D7A;
+  margin-right: 0;
+}
+
+.bio {
+  color:white;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64px;
+}
+
+.button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  position: absolute;
+  border-radius: 66px;
+  background-color: #03C39A;
+  width: max-content;
+  height: max-content;
+  font-size: 24px;
+  font-weight: 400;
+  bottom: 16px;
+  right: 16px;
+  height: 48px;
+  width: 150px;
+}
+
+.card_number_text_title{
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.card_number_text_subtitle{
+  font-size: 24px;
+}
+
+.link {
+  color:white;
+  outline: none;
+  text-decoration: none;
+}
+
+.top_right_container {
+  width: 50%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+
+}
+
+.me_card {
+  position: relative;
+  width: calc(100% - 32px);
+  height: 70px;
+  padding: 16px;
+  border-radius: 24px;
+  background-color: #1D1B1E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.me_text{ 
+  color: white;
+  font-size: 32px;
+}
+
