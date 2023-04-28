@@ -4,9 +4,12 @@
 body {
   background-color: #0F0F0F;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   font-family: sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -14,7 +17,18 @@ body {
   height: calc(100% - 32px);
   padding: 16px; 
   display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1440px;
+
 }
 
 .top {
@@ -42,10 +56,11 @@ body {
 .card {
   position: relative;
   width: calc(100% - 64px);
-  height: 400px;
   padding: 32px;
   border-radius: 24px;
   background-color: #1D1B1E;
+  height: min-content;
+  min-height: 200px;
 }
 
 .cards_numbers {
@@ -56,7 +71,7 @@ body {
 
 .card_number {
   width: calc((100% / 3) - 32px);
-  height: 215px;
+  height: 100%;
   padding: 32px;
   border-radius: 24px;
   margin-top: 16px;
@@ -67,6 +82,7 @@ body {
   align-items: center;
   color: white;
   text-align: center;
+  align-items: stretch;
 }
 
 .card_green {
@@ -87,7 +103,7 @@ body {
   color:white;
   font-size: 48px;
   font-weight: 600;
-  line-height: 64px;
+  line-height: 48px;
 }
 
 .button {
@@ -129,7 +145,7 @@ body {
 
 .top_right_container {
   width: 50%;
-  height:100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 8px;
@@ -155,21 +171,21 @@ body {
 
 .top_right_wrapper {
   display: flex;
-  width: 100%;
+  width: calc(100% - 16px);
   height: 100%;
 }
 
 .profile_picture {
   margin-top: 16px;
   margin-right: 16px;
-  width: 300px;
+  width: 50%;
   height: calc(100% - 48px);
   border-radius: 24px;
   object-fit: cover;
 }
 
 .info_wrapper {
-  width: 100%;
+  width: 50%;
   height: calc(100% - 32px);
   display: flex;
   flex-direction: column;
@@ -202,10 +218,15 @@ body {
   margin-top: 16px;
 }
 .bottom_left {
-  width: 45%;
+  width: 50%;
   height: calc(100% - 80px);
   display: flex;
   flex-direction: column;
+}
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .left_title{
@@ -223,15 +244,32 @@ body {
 .projects {
   display: flex;
   margin-top: 16px;
+  height: calc(100% - 32px);
+  width: 100%;
+  height: 200px;
+  justify-content: flex-start;
+  overflow-x: scroll; 
+  overflow-y: hidden;
+}
+
+.projects::-webkit-scrollbar {
+  display: none;
 }
 
 .project_thumbnail {
   position: relative;
   width: 200px;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   border-radius: 24px;
   margin-right: 16px;
+  min-width: 120px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+.map {
+  border-radius: 24px;
+  margin-top: 16px;
 }
 
 .background {
@@ -265,7 +303,7 @@ body {
 }
 
 .bottom_right {
-  width: 45%;
+  width: 50%;
   height: calc(100% - 80px);
   display: flex;
   flex-direction: column;
@@ -273,34 +311,181 @@ body {
 }
 
 .about { 
-  padding-top: 4px;
+  padding-top: 8px;
   color: #A9A8AA;
   text-align: justify;
   font-size: 16px;
 }
+
 .brands_container {
   width: calc(100% - 32px);
   padding: 16px;
   border-radius: 24px;
   background-color: #1D1B1E;
   display: flex;
-  flex-direction: column;
   padding: 16px;
   margin-top: 16px;
+  justify-content: space-between;
 }
 
 
 .brand {
-  width: 66px;
-  height: 66px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   background-color: #262427;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-right: 16px;
 }
 
 .brand:hover {
   cursor: pointer;
   background-color: #2b4570;
+}
+
+.brand_icon {
+  width: 100%;
+  height: 100%;
+  /* transform: scale(0.8); */
+}
+
+.logo {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  background-image: url('./assets/logo.png');
+}
+
+
+@media screen and (max-width: 1292px) {
+  .bio {
+    font-size: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 1230px) {
+  .card_number {
+    padding: 16px;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  .bio {
+    font-size: 34px;
+  }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .card_number_text_title {
+    font-size: 48px;
+  }
+  .card_number_text_subtitle {
+    font-size: 16px;
+  }
+  .brands_container {
+    width: calc(100% - 32px);
+    padding: 16px;
+    border-radius: 24px;
+    background-color: #1D1B1E;
+    display: flex;
+    padding: 16px;
+    margin-top: 16px;
+  }
+  .brand {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body { 
+    font-size: 2em; 
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .top_left_container {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .top {
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .top_right_container {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .bottom_left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .bottom_right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .bio {
+    font-size: 48px;  
+  }
+  .bottom_left {
+    margin-bottom: 16px;
+  }
+  .bottom_right {
+    width: 100%;
+    margin-left: 0;
+  }
+  .about {
+    font-size: 16px;
+  }
+  .brand{
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  body {
+    font-size: 24px;
+  }
+  .bio {
+    font-size: 30px;  
+  }
+  .cards_numbers {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand {
+    width: 48px;
+    height: 48px;
+  }
+  .about {
+    font-size: 15px;
+  }
+  .card_number {
+    width: calc(100% - 32px);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .bio {
+    font-size: 30px;
+  }
 }
