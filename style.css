@@ -328,6 +328,9 @@ body::-webkit-scrollbar {
   justify-content: space-between;
 }
 
+.mobile {
+  display: none;
+}
 
 .brand {
   width: 50px;
@@ -408,6 +411,12 @@ body::-webkit-scrollbar {
   body { 
     font-size: 2em; 
   }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -415,6 +424,7 @@ body::-webkit-scrollbar {
   .top_left_container {
     width: 100%;
     margin-bottom: 16px;
+    margin-right: 0;
   }
   .top {
     width: 100%;
@@ -424,6 +434,17 @@ body::-webkit-scrollbar {
   .top_right_container {
     width: 100%;
     margin-bottom: 16px;
+    margin-left: 0;
+  }
+  .top_right_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .profile_picture {
+    width: 100%;
+    margin-right: 0;
   }
   .bottom {
     width: 100%;
@@ -458,6 +479,18 @@ body::-webkit-scrollbar {
   .brand{
     width: 36px;
     height: 36px;
+  }
+  .card_space_between {
+    width: 100%;
+  }
+  .info_wrapper {
+    width: calc(100% - 32px);
+  }
+  .card_space_between_map {
+    width: 100%;
+  }
+  .me_mobile{
+    width: calc(100% - 32px);
   }
 }
 
